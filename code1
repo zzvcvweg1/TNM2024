@@ -252,7 +252,7 @@ campaignTrail_temp.global_parameter_json = [
             "issue_stance_6_max": 0.71,
             "global_variance": 0.01,
             "state_variance": 0.005,
-            "question_count": 25,
+            "question_count": 30,
             "default_map_color_hex": "#C9C9C9",
             "no_state_map_color_hex": "#999999"
         }
@@ -266,8 +266,7 @@ campaignTrail_temp.opponents_default_json = [
             300,
             301,
             302,
-            303,
-            312
+            303
         ]
     }
 ];
@@ -279,8 +278,7 @@ campaignTrail_temp.opponents_weighted_json = [
             300,
             301,
             302,
-            303,
-            312
+            303
         ]
     }
 ];
