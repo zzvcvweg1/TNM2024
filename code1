@@ -74,7 +74,7 @@ campaignTrail_temp.candidate_json = [
             "election": 21,
             "party": "Republican",
             "state": "Vermont",
-            "priority": 3,
+            "priority": 10,
             "description": "<p>Put description here</p>",
             "color_hex": "#f4301a",
             "secondary_color_hex": "#FFA0A0",
@@ -97,7 +97,7 @@ campaignTrail_temp.candidate_json = [
             "election": 21,
             "party": "Democrat",
             "state": "Pennsylvania",
-            "priority": 4,
+            "priority": 5,
             "description": "",
             "color_hex": "#2865D8",
             "secondary_color_hex": "#90C0FF",
@@ -109,6 +109,98 @@ campaignTrail_temp.candidate_json = [
             "description_as_running_mate": "<p>Governor Josh Shapiro of Pennsylvania joins Gavin Newsom on the Democratic ticket. His role in the vice-presidential debate against Phil Scott is one of the major moments of the campaign.</p>",
             "candidate_score": 0,
             "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 302,
+        "fields": {
+            "first_name": "Chase",
+            "last_name": "Oliver",
+            "election": 21,
+            "party": "Libertarian",
+            "state": "Georgia",
+            "priority": 3,
+            "description": "'",
+            "color_hex": "#FFFF00",
+            "secondary_color_hex": "#FFFFC0",
+            "is_active": 0,
+            "image_url": "'",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "'",
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 303,
+        "fields": {
+            "first_name": "Cornel",
+            "last_name": "West",
+            "election": 21,
+            "party": "Green",
+            "state": "California",
+            "priority": 4,
+            "description": "'",
+            "color_hex": "#00C100",
+            "secondary_color_hex": "#A1FFA1",
+            "is_active": 0,
+            "image_url": "'",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "'",
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 311,
+        "fields": {
+            "first_name": "Spike",
+            "last_name": "Cohen",
+            "election": 21,
+            "party": "Libertarian",
+            "state": "Maryland",
+            "priority": 12,
+            "description": "'",
+            "color_hex": "#FFFF00",
+            "secondary_color_hex": "#FFFFC0",
+            "is_active": 0,
+            "image_url": "'",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "'",
+            "candidate_score": 0,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 312,
+        "fields": {
+            "first_name": "Angela",
+            "last_name": "Walker",
+            "election": 21,
+            "party": "Green",
+            "state": "Wisconsin",
+            "priority": 13,
+            "description": "'",
+            "color_hex": "#00C100",
+            "secondary_color_hex": "#A1FFA1",
+            "is_active": 0,
+            "image_url": "'",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "'",
+            "candidate_score": 0,
+            "running_mate": false
         }
     }
 ];
@@ -128,6 +220,14 @@ campaignTrail_temp.running_mate_json = [
         "fields": {
             "candidate": 301,
             "running_mate": 309
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 207,
+        "fields": {
+            "candidate": 302,
+            "running_mate": 311
         }
     }
 ];
@@ -164,7 +264,10 @@ campaignTrail_temp.opponents_default_json = [
         "election": 21,
         "candidates": [
             300,
-            301
+            301,
+            302,
+            303,
+            312
         ]
     }
 ];
@@ -174,7 +277,10 @@ campaignTrail_temp.opponents_weighted_json = [
         "election": 21,
         "candidates": [
             300,
-            301
+            301,
+            302,
+            303,
+            312
         ]
     }
 ];
