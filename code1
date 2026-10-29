@@ -1,0 +1,206 @@
+campaignTrail_temp.election_json = [
+    {
+        "model": "campaign_trail.election",
+        "pk": 20,
+        "fields": {
+            "year": 2024,
+            "display_year": "2024 - The New Millennium",
+            "summary": "<p>As America enters a new decade, the optimism of the 00s under President Wellstone and 2010s under Romney and Sanders still endures. Following a narrow victory over incubment Sanders in 2020, it is now up to John Kasich to carry forward the torch of American Idealism, which has come to define the 21st century.</p><p>On domestic front, President Kasich will need to oversee steady economic recovery while keeping inflation under control. On the world stage, the primary areas of geopolitical interest of the United States include ascendance of Russia into the EU under President Nadezhdin and the ongoing democratization of Iraq following the death of Saddam Hussein.</p>",
+            "image_url": "https://i.imgur.com/z3plbFt.jpeg",
+            "winning_electoral_vote_number": 270,
+            "advisor_url": "123",
+            "recommended_reading": "<ul>\n<li><a href=https://www.goodreads.com/en/book/show/61281739-all-s-right-with-the-world>All’s Right with the World: A Lyrical Picture Book About Everyday Childhood Moments for Kids</a></li>\n</ul>",
+            "recommended_reading_enabled": true,
+            "has_visits": 1,
+            "no_electoral_majority_image": "../static/images/2012-no-majority.jpg"
+        }
+    }
+];
+
+campaignTrail_temp.temp_election_list = [
+    {
+        "id": 20,
+        "year": 2024,
+        "is_premium": 0,
+        "display_year": "2024 - The New Millennium"
+    }
+];
+
+RecReading = true;
+
+campaignTrail_temp.credits = "u/Egorrosh";
+
+campaignTrail_temp.global_parameter_json = [
+    {
+        "model": "campaign_trail.global_parameter",
+        "pk": 1,
+        "fields": {
+            "vote_variable": 1.125,
+            "max_swing": 0.12,
+            "start_point": 0.94,
+            "candidate_issue_weight": 10,
+            "running_mate_issue_weight": 3,
+            "issue_stance_1_max": -0.71,
+            "issue_stance_2_max": -0.3,
+            "issue_stance_3_max": -0.125,
+            "issue_stance_4_max": 0.125,
+            "issue_stance_5_max": 0.3,
+            "issue_stance_6_max": 0.71,
+            "global_variance": 0.01,
+            "state_variance": 0.005,
+            "question_count": 25,
+            "default_map_color_hex": "#C9C9C9",
+            "no_state_map_color_hex": "#999999"
+        }
+    }
+];
+
+campaignTrail_temp.candidate_json = [
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 1001,
+        "fields": {
+            "first_name": "John",
+            "last_name": "Kasich",
+            "election": 20,
+            "party": "Republican",
+            "state": "Ohio",
+            "priority": 1,
+            "description": "<p>John Kasich ascends to the presidency in an uneasy time of economic turmoil, yet crisis management is something he is no stranger to. During his time in the Romney administration, Kasich was at the forefront of pushing through the American Reinvigoration Plan, which led to the economy coming back roaring. As such, Kasich knows how to handle the recovery in the aftermath of lockdowns for the tragedy of COVID-19, which took the lives of an estimated 150,000 Americans.</p><p>President Kasich remains optimistic about the prospects of his presidency. America is is a strong nation, her people are united and compassionate, have never backed down from a challenge, and have always risen to the occasion.</p>",
+            "color_hex": "#e64533",
+            "secondary_color_hex": null,
+            "is_active": 1,
+            "image_url": "https://i.imgur.com/DaVeGMR.png",
+            "electoral_victory_message": "<p>Congragulations, Mr. President!</p><p>Through your steady, determined, competent and optimistic leadership, the nation is now, beyond all doubt, in a better place than where it was 4 years ago. And, with your 2nd term secured, you will see to it that by 2028, it will be in an even better place than where it is right now.</p><p>The main things to look forward to for you are the upcoming World Cup, the opening of the first permanent base on the moon, and, of course, the celebration of the nation's 250th birthday. With bright future on the horizon, it appears that Vice president Scott will be in a good position to run for President in '28 if he wishes to. For now, however, it's time for you and your family to celebrate! The sun shines bright in America, and there are no clouds in sight.</p>",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": null,
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 1002,
+        "fields": {
+            "first_name": "Phil",
+            "last_name": "Scott",
+            "election": 20,
+            "party": "Republican",
+            "state": "Vermont",
+            "priority": 1,
+            "description": "<p>Put description here</p>",
+            "color_hex": "#f4301a",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/4owRgV0.png",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": "<p>Phil Scott has two unique talents that made him the perfect choice for Vice President: He knows how to win over support across the aisle, and he knows how to  assist the people when disaster strikes.</p><p>As Vice President, he sees his task being to ensure that the Democratic Congress and the Republican Executive Branch are able to find common ground wherever possible, and provide for the American people, while both staying true to their values. With the aftermath of the pandemic and economic recession still causing people to hurt, Vice President Scott will do everything he can to ensure that aid is delivered to those in need.</p>",
+            "candidate_score": 1,
+            "running_mate": true
+        }
+    }
+];
+
+campaignTrail_temp.running_mate_json = [
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 500,
+        "fields": {
+            "candidate": 1001,
+            "running_mate": 1002
+        }
+    }
+];
+
+campaignTrail_temp.opponents_default_json = [
+    {
+        "election": 20,
+        "candidates": [
+            1001
+        ]
+    }
+];
+
+campaignTrail_temp.opponents_weighted_json = [
+    {
+        "election": 20,
+        "candidates": [
+            1001
+        ]
+    }
+];
+
+jet_data = {
+    "headerColor": "#0042ad",
+    "headerTextColor": "#ffffff",
+    "windowColor": "#b30505",
+    "containerColor": "#25366a",
+    "innerWindowColor": "#af2c2c",
+    "innerWindowTextColor": "#000000",
+    "descriptionWindowColor": "#f8f8f8",
+    "descriptionWindowTextColor": "#000000",
+    "startButtonColor": "#0712a6",
+    "bannerImageUrl": "https://i.imgur.com/wmwZ3o0.png",
+    "backgroundImageUrl": "https://i.imgur.com/8rjuKcD.png",
+    "gameTitle": "THE CAMPAIGN TRAIL",
+    "customQuote": "",
+    "quoteTextColor": "#ffffff",
+    "endingTextColor": "#000000"
+};
+
+//#startcode
+function applyTheme(theme) {
+    const gameHeader = document.querySelector(".game_header");
+    if (gameHeader && theme.coloring_title) {
+        gameHeader.style.backgroundColor = theme.coloring_title;
+    }
+
+    const gameWindow = document.getElementById("game_window");
+    if (gameWindow && theme.coloring_window) {
+        gameWindow.style.backgroundColor = theme.coloring_window;
+    }
+
+    const container = document.querySelector(".container");
+    if (container && theme.coloring_container) {
+        container.style.backgroundColor = theme.coloring_container;
+    }
+
+    const headerImg = document.getElementById("header");
+    if (headerImg && theme.header_image) {
+        headerImg.src = theme.header_image;
+    }
+
+    if (theme.body_background) {
+        document.body.style.backgroundImage = `url("${theme.body_background}")`;
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundAttachment = "fixed";
+    }
+
+    const style = document.createElement("style");
+    style.textContent = `
+      #results_container { color: #000000; }
+      #wittyquote { color: #ffffff; }
+      .game_header h2 { color: #ffffff; }
+      .inner_window_w_desc { background-color: #af2c2c !important; color: #000000; }
+      .inner_window_front, .person_description_window, .election_description_window, .description_window_small { background-color: #f8f8f8 !important; color: #000000; }
+      .campaign_trail_start_emphasis { background-color: #0712a6 !important; }
+    `;
+    document.head.appendChild(style);
+}
+
+
+
+const theme = nct_stuff.themes[nct_stuff.selectedTheme];
+
+// define / override theme values
+theme.coloring_title     = "#0042ad";
+theme.coloring_window    = "#b30505";
+theme.coloring_container = "#25366a";
+theme.header_image = "https://i.imgur.com/tw66iin.png";
+theme.body_background = "https://i.imgur.com/8rjuKcD.png";
+
+applyTheme(theme);
+//#endcode
