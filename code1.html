@@ -347,6 +347,28 @@ jet_data = {
         .inner_window_w_desc { background-color: #af2c2c !important; color: #000000; }
         .inner_window_front, .person_description_window, .election_description_window, .description_window_small { background-color: #f8f8f8 !important; color: #000000; }
         .campaign_trail_start_emphasis { background-color: #0712a6 !important; }
+        #state_info h3,
+        #state_result h3,
+        #overall_result h3,
+        .overlay_window h3,
+        .inner_window_question h3 {
+            background-color: #7fa0d6;
+        }
+        #overall_result_container,
+        #menu_container,
+        #state_result_container {
+            background-color: #B52429;
+        }
+        #campaign_sign {
+            background-color: #B30505;
+            border-color: #230101;
+        }
+        .overlay_window {
+            height: auto;
+        }
+        #map_footer {
+            padding-top: 3em;
+        }
     `;
     document.head.appendChild(style);
 }());
