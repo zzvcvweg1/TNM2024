@@ -21,7 +21,7 @@ campaignTrail_temp.election_json = [
 campaignTrail_temp.candidate_json = [
     {
         "model": "campaign_trail.candidate",
-        "pk": 300,
+        "pk": 301,
         "fields": {
             "first_name": "John",
             "last_name": "Kasich",
@@ -44,7 +44,7 @@ campaignTrail_temp.candidate_json = [
     },
     {
         "model": "campaign_trail.candidate",
-        "pk": 301,
+        "pk": 300,
         "fields": {
             "first_name": "Gavin",
             "last_name": "Newsom",
@@ -67,7 +67,7 @@ campaignTrail_temp.candidate_json = [
     },
     {
         "model": "campaign_trail.candidate",
-        "pk": 304,
+        "pk": 309,
         "fields": {
             "first_name": "Phil",
             "last_name": "Scott",
@@ -90,7 +90,7 @@ campaignTrail_temp.candidate_json = [
     },
     {
         "model": "campaign_trail.candidate",
-        "pk": 309,
+        "pk": 304,
         "fields": {
             "first_name": "Josh",
             "last_name": "Shapiro",
