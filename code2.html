@@ -7112,7 +7112,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 6022,
             "candidate": 301,
             "affected_candidate": 301,
-            "global_multiplier": 0.0015
+            "global_multiplier": -0.009
         }
     },
     {
@@ -7372,7 +7372,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 6048,
             "candidate": 301,
             "affected_candidate": 301,
-            "global_multiplier": 0.0008
+            "global_multiplier": -0.0035
         }
     },
     {
@@ -11163,20 +11163,25 @@ if (tnmKasich2024) {
 
 //#startcode
 campaignTrail_temp.cyoa = true;
-cyoAdventure = function (question) {
-    if (!question) return;
-    var answers = campaignTrail_temp.player_answers || [];
-    if (question.pk === 1206) {
-        var feedback = campaignTrail_temp.answer_feedback_json.find(function (item) { return item.fields.answer === 6022; });
-        if (feedback) feedback.fields.answer_feedback = answers.indexOf(6015) !== -1 ? "Your speech brings standing ovation. Then, like clockwork, your European allies are able to organize one grand push for action. It seemed impossible at the start of summit, but, in large part thanks to you, special status of associates is awarded to the applicant states." : "An inspiring speech that has moved many, but didn’t quite move everyone. And unfortunately, the EU enlargement requires unanimity. Expansion proposal is blocked by Poland, Romania and Bulgaria.";
-        var effect = campaignTrail_temp.answer_score_global_json.find(function (item) { return item.fields.answer === 6022 && item.fields.affected_candidate === 301; });
-        if (effect) effect.fields.global_multiplier = answers.indexOf(6015) !== -1 ? 0.0025 : -0.0011;
+cyoAdventure = function (a) {
+    var ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1];
+
+    if (ans == 6015) {
+        campaignTrail_temp.answer_feedback_json.find(f => f.fields.answer == 6022).fields.answer_feedback = "Your speech brings standing ovation. Then, like clockwork, your European allies are able to organize one grand push for action. It seemed impossible at the start of summit, but, in large part thanks to you, special status of associates is awarded to the applicant states.";
+        campaignTrail_temp.answer_score_global_json.find(f => f.fields.answer == 6022 && f.fields.affected_candidate == 301).fields.global_multiplier = 0.0275;
     }
-    if (question.pk === 1215) {
-        var feedback = campaignTrail_temp.answer_feedback_json.find(function (item) { return item.fields.answer === 6048; });
-        if (feedback) feedback.fields.answer_feedback = answers.indexOf(6046) !== -1 ? "Against all odds, your party, in a year when you were at disadvantage as incumbent, has managed to flip both chambers of congress red, with Vice President Scott as the tie-breaker in the 50/50 senate. The party owes you this mandate, and your ratings among GOP base soar." : "The people who this message is aimed at don’t quite buy it, and end up voting for the democrats. However, the final result can’t quite be called a “blue wave”, more so a “blue drizzle”.";
-        var effect = campaignTrail_temp.answer_score_global_json.find(function (item) { return item.fields.answer === 6048 && item.fields.affected_candidate === 301; });
-        if (effect) effect.fields.global_multiplier = answers.indexOf(6046) !== -1 ? 0.0034 : -0.0008;
+
+    if (ans == 6022 && campaignTrail_temp.player_answers.includes(6015)) {
+        campaignTrail_temp.answer_feedback_json.find(f => f.fields.answer == 6029).fields.answer_feedback = "Your role in securing associate status for Belarus gives the visit a little more weight than an ordinary diplomatic stop. During your visit, you are surprised by just how much of their architecture is still from the soviet era. You discuss possibilities of American companies investing into Belarus real estate development, much to the delight of both Belarusians and your business friends back home.";
+    }
+
+    if (ans == 6046) {
+        campaignTrail_temp.answer_feedback_json.find(f => f.fields.answer == 6048).fields.answer_feedback = "Against all odds, your party, in a year when you were at disadvantage as incumbent, has managed to flip both chambers of congress red, with Vice President Scott as the tie-breaker in the 50/50 senate. The party owes you this mandate, and your ratings among GOP base soar.";
+        campaignTrail_temp.answer_score_global_json.find(f => f.fields.answer == 6048 && f.fields.affected_candidate == 301).fields.global_multiplier = 0.080;
+    }
+
+    if (ans == 6048 && campaignTrail_temp.player_answers.includes(6046)) {
+        campaignTrail_temp.questions_json.find(f => f.pk == 1216).fields.description = "With midterms concluded, and Republicans now controlling the House and holding the Senate through Vice President Scott’s tie-breaking vote, the time has come for yet another State of the Union address. What will you focus on this year in your address to the new Congress, and what objectives do you wish to lay out before the congressional leadership in your address?";
     }
 };
 //#endcode
